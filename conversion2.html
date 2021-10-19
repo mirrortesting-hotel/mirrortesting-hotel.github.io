@@ -12,6 +12,12 @@
   gtag('config', 'AW-376259107');
 </script>
 <script>
+  const today = new Date();
+  const day30 = new Date().setDate(today.getDate() + 30);
+  const day30str = new Date(day30).toISOString().slice(0, 10);
+  const day31 = new Date().setDate(today.getDate() + 31);
+  const day31str = new Date(day30).toISOString().slice(0, 10);
+  
   gtag('event', 'purchase', {
       'send_to': 'AW-376259107/HxrjCJuu1uICEKOEtbMB',
       'transaction_id': '20210727-2',
@@ -19,8 +25,8 @@
       'currency': 'USD',
       'items': [{
         'id': '220',
-        'start_date': '2021-12-15',
-        'end_date': '2021-12-16'
+        'start_date': day30str,
+        'end_date': day31str
       }]
   });
 </script>
