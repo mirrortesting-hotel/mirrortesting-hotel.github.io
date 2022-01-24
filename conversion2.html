@@ -20,7 +20,10 @@
   const day31str = new Date(day31).toISOString().slice(0, 10);
   
   gtag('event', 'purchase', {
-      'send_to': 'AW-376259107/HxrjCJuu1uICEKOEtbMB',
+      'send_to': [
+        'AW-376259107/HxrjCJuu1uICEKOEtbMB', 
+        'G-G55HQ8G49M'
+      ],
       'transaction_id': Date.now(),
       'value': 50,
       'currency': 'USD',
