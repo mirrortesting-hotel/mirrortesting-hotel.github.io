@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G55HQ8G49M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G55HQ8G49M');
+</script>
+<script>
+  const today = new Date();
+  const day30 = new Date().setDate(today.getDate() + 30);
+  const day30str = new Date(day30).toISOString().slice(0, 10);
+  const day31 = new Date().setDate(today.getDate() + 31);
+  const day31str = new Date(day31).toISOString().slice(0, 10);
+  
+  gtag('event', 'purchase', {
+      'send_to': 'G-G55HQ8G49M',
+      'transaction_id': Date.now()+1,
+      'value': 50,
+      'currency': 'USD',
+      'items': [{
+        'id': '220',
+        'start_date': day30str,
+        'end_date': day31str
+      }]
+  });
+</script>
+</head>
+
+<title>GA Conversion</title>
+<p>GA Conversion </p>
