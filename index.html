@@ -12,12 +12,23 @@
   gtag('config', 'AW-376259107');
   gtag('config', 'G-G55HQ8G49M');
   gtag('config', 'UA-219916432-1');
+
+  // Adds `transaction_id` query parameter to a link if one is specified in the
+  // "Transaction ID" input field.
+  function addTransactionId(linkElement){
+    const transactionId = document.getElementById("conversion-transaction-id-input").value;
+    if (transactionId !== '') {
+      linkElement.href += "?transaction_id=" + transactionId;
+    }
+  }
 </script>
 
 </head>
 
 <title>Mirror Test</title>
 <p> Mirror Test </p>
-<a href = "conversion2.html">Conversion2</a>
-<a href = "ga-conversion.html">GA Conversion</a>
-<a href = "legacy-ga-conversion.html">Legacy-GA Conversion</a>
+<label for="conversion-transaction-id-input"> Transaction ID: </label>
+<input type="text" id="conversion-transaction-id-input" name="transaction-id"/>
+<a href="conversion2.html" onclick="addTransactionId(this)">Conversion2</a>
+<a href="ga-conversion.html" onclick="addTransactionId(this)">GA Conversion</a>
+<a href="legacy-ga-conversion.html" onclick="addTransactionId(this)">Legacy-GA Conversion</a>
