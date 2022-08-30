@@ -17,7 +17,7 @@
   // "Transaction ID" input field.
   function addTransactionId(linkElement){
     const transactionId = document.getElementById("conversion-transaction-id-input").value;
-    if (transactionId != '') {
+    if (transactionId !== '') {
       linkElement.href += "?transaction_id=" + transactionId;
     }
   }
