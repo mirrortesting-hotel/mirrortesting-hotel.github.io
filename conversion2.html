@@ -17,11 +17,13 @@
   const day30str = new Date(day30).toISOString().slice(0, 10);
   const day31 = new Date().setDate(today.getDate() + 31);
   const day31str = new Date(day31).toISOString().slice(0, 10);
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
   
   <!-- Event snippet for Project Mirror 64bit Web Purchase conversion page -->
   gtag('event', 'purchase', {
       'send_to': 'AW-376259107/NvfgCP6BgIAYEKOEtbMB',
-      'transaction_id': Date.now(),
+      'transaction_id': urlParams.get('transaction_id'),
       'value': 50,
       'currency': 'USD',
       'items': [{
