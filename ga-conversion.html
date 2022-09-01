@@ -23,7 +23,7 @@
   gtag('event', 'purchase', {
       'send_to': 'G-G55HQ8G49M',
       'debug_mode': true,
-      'transaction_id': urlParams.get('transaction_id'),
+      'transaction_id': urlParams.get('transaction_id') || Date.now(),
       'value': 50,
       'currency': 'USD',
       'start_date': day30str,
