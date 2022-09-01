@@ -24,7 +24,7 @@
   gtag('event', 'purchase', {
       'send_to': 'UA-219916432-1',
       'debug_mode': true,
-      'transaction_id': urlParams.get('transaction_id'),
+      'transaction_id': urlParams.get('transaction_id') || Date.now(),
       'value': 50,
       'currency': 'USD',
       'items': [{
