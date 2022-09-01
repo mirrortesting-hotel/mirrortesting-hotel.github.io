@@ -23,7 +23,7 @@
   <!-- Event snippet for Project Mirror 64bit Web Purchase conversion page -->
   gtag('event', 'purchase', {
       'send_to': 'AW-376259107/NvfgCP6BgIAYEKOEtbMB',
-      'transaction_id': urlParams.get('transaction_id'),
+      'transaction_id': urlParams.get('transaction_id') || Date.now(),
       'value': 50,
       'currency': 'USD',
       'items': [{
